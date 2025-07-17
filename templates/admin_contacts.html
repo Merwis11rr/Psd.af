@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}مدیریت پیام‌ها - PSD.af{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">مدیریت پیام‌ها</h1>
+                <p class="page-subtitle">مشاهده و مدیریت پیام‌های دریافتی از مشتریان</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="admin-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="admin-panel">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3>پیام‌های دریافتی ({{ contacts|length }} پیام)</h3>
+                        <div class="admin-stats">
+                            <span class="badge bg-primary">کل: {{ contacts|length }}</span>
+                            <span class="badge bg-warning">جدید: {{ contacts|selectattr("status", "equalto", "new")|list|length }}</span>
+                            <span class="badge bg-success">پاسخ داده شده: {{ contacts|selectattr("status", "equalto", "contacted")|list|length }}</span>
+                        </div>
+                    </div>
+                    
+                    {% if contacts %}
+                        <div class="table-responsive">
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>تاریخ</th>
+                                        <th>نام</th>
+                                        <th>ایمیل</th>
+                                        <th>تلفن</th>
+                                        <th>نوع خدمت</th>
+                                        <th>پیام</th>
+                                        <th>وضعیت</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for contact in contacts %}
+                                    <tr class="contact-row" data-status="{{ contact.status }}">
+                                        <td class="text-nowrap">
+                                            {{ contact.created_at.strftime('%Y/%m/%d') }}<br>
+                                            <small class="text-muted">{{ contact.created_at.strftime('%H:%M') }}</small>
+                                        </td>
+                                        <td>
+                                            <strong>{{ contact.name }}</strong>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:{{ contact.email }}" class="text-primary">
+                                                {{ contact.email }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            {% if contact.phone %}
+                                                <a href="tel:{{ contact.phone }}" class="text-success">
+                                                    {{ contact.phone }}
+                                                </a>
+                                            {% else %}
+                                                <span class="text-muted">-</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if contact.service %}
+                                                <span class="badge bg-info">{{ contact.service }}</span>
+                                            {% else %}
+                                                <span class="text-muted">نامشخص</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <div class="message-preview" style="max-width: 300px;">
+                                                {% if contact.message|length > 100 %}
+                                                    {{ contact.message[:100] }}...
+                                                    <button class="btn btn-sm btn-link p-0 text-warning" 
+                                                            onclick="toggleMessage({{ contact.id }})">
+                                                        مشاهده کامل
+                                                    </button>
+                                                {% else %}
+                                                    {{ contact.message }}
+                                                {% endif %}
+                                            </div>
+                                            <div class="full-message d-none" id="message-{{ contact.id }}">
+                                                {{ contact.message }}
+                                                <button class="btn btn-sm btn-link p-0 text-warning" 
+                                                        onclick="toggleMessage({{ contact.id }})">
+                                                    بستن
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            {% if contact.status == 'new' %}
+                                                <span class="badge bg-danger">جدید</span>
+                                            {% elif contact.status == 'contacted' %}
+                                                <span class="badge bg-success">تماس گرفته شده</span>
+                                            {% elif contact.status == 'completed' %}
+                                                <span class="badge bg-primary">تکمیل شده</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <a href="mailto:{{ contact.email }}" 
+                                                   class="btn btn-sm btn-outline-primary" 
+                                                   title="ارسال ایمیل">
+                                                    <i class="fas fa-envelope"></i>
+                                                </a>
+                                                {% if contact.phone %}
+                                                <a href="https://wa.me/{{ contact.phone.replace('+', '').replace(' ', '') }}" 
+                                                   class="btn btn-sm btn-outline-success" 
+                                                   target="_blank"
+                                                   title="واتسپ">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                                {% endif %}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                            <h4 class="text-muted">هیچ پیامی دریافت نشده است</h4>
+                            <p class="text-muted">پیام‌های ارسالی از فرم تماس اینجا نمایش داده می‌شوند.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<style>
+.admin-panel {
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.table-dark {
+    background: transparent;
+}
+
+.table-dark th {
+    background: rgba(255, 204, 0, 0.1);
+    color: #ffcc00;
+    border-color: #333;
+}
+
+.table-dark td {
+    border-color: #333;
+}
+
+.contact-row[data-status="new"] {
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.contact-row[data-status="contacted"] {
+    background: rgba(40, 167, 69, 0.1);
+}
+
+.contact-row[data-status="completed"] {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+.admin-stats .badge {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+
+.message-preview {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.btn-group .btn {
+    margin: 0 2px;
+}
+</style>
+
+<script>
+function toggleMessage(contactId) {
+    const preview = document.querySelector(`#message-${contactId}`).previousElementSibling;
+    const fullMessage = document.querySelector(`#message-${contactId}`);
+    
+    if (fullMessage.classList.contains('d-none')) {
+        preview.classList.add('d-none');
+        fullMessage.classList.remove('d-none');
+    } else {
+        preview.classList.remove('d-none');
+        fullMessage.classList.add('d-none');
+    }
+}
+
+// Filter contacts by status
+function filterContacts(status) {
+    const rows = document.querySelectorAll('.contact-row');
+    rows.forEach(row => {
+        if (status === 'all' || row.getAttribute('data-status') === status) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

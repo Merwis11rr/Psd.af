@@ -20,10 +20,12 @@ Preferred communication style: Simple, everyday language.
 
 ### Backend Architecture
 - **Framework**: Flask (Python web framework)
-- **Structure**: Simple MVC pattern with routes, templates, and static files
+- **Database**: PostgreSQL with SQLAlchemy ORM
+- **Structure**: MVC pattern with models, routes, templates, and static files
 - **Session Management**: Flask sessions with configurable secret key
 - **Error Handling**: Custom 404 and 500 error handlers
 - **Proxy Support**: Werkzeug ProxyFix for deployment behind reverse proxies
+- **Data Models**: Contact forms, Portfolio items, Testimonials, Blog posts, Services, Newsletter
 
 ## Key Components
 
@@ -58,8 +60,9 @@ Preferred communication style: Simple, everyday language.
 ### Contact Form Processing
 - Form data validation on submission
 - Flash messages for user feedback (success/error)
-- Currently displays messages only (no database/email integration)
-- Future enhancement: Database storage or email integration
+- Database storage of all contact submissions
+- Admin interface for viewing and managing contact messages
+- Integration with WhatsApp and email for client communication
 
 ## External Dependencies
 
@@ -71,7 +74,10 @@ Preferred communication style: Simple, everyday language.
 
 ### Backend Dependencies
 - **Flask**: Web framework
+- **Flask-SQLAlchemy**: Database ORM
+- **PostgreSQL**: Database engine
 - **Werkzeug**: WSGI utilities and middleware
+- **Gunicorn**: WSGI HTTP server
 
 ### Development Dependencies
 - Python 3.x runtime environment
@@ -91,8 +97,18 @@ Preferred communication style: Simple, everyday language.
 - Consider WSGI server (Gunicorn, uWSGI) for production deployment
 - Static file serving should be handled by web server (Nginx, Apache)
 
-### Scalability Notes
-- Current implementation is stateless and suitable for horizontal scaling
-- No database dependencies in current version
-- Contact form functionality needs enhancement for production use
-- Consider adding database integration for contact form submissions and portfolio management
+### Database Schema
+- **Contact**: Customer inquiries and contact form submissions
+- **Portfolio**: Design projects and portfolio showcase items
+- **Testimonial**: Client feedback and reviews
+- **BlogPost**: Design insights and company blog content
+- **Service**: Available design services and pricing
+- **Newsletter**: Email subscription management
+
+### Recent Enhancements (July 17, 2025)
+- ✓ Added PostgreSQL database integration
+- ✓ Created comprehensive data models for content management
+- ✓ Implemented contact form database storage
+- ✓ Added admin interface for viewing contact submissions
+- ✓ Created sample data population system
+- ✓ Enhanced portfolio and testimonial management
