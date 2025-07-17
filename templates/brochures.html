@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}بروشورها - PSD.af{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">بروشورها</h1>
+                <p class="page-subtitle">نمونه‌هایی از طراحی بروشور حرفه‌ای</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-grid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>بروشور شرکتی</h4>
+                        <p>طراحی مدرن و حرفه‌ای برای معرفی خدمات شرکت با استفاده از رنگ‌های گرم</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">شرکتی</span>
+                            <span class="tag">مدرن</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>بروشور رستوران</h4>
+                        <p>طراحی جذاب و خوشمزه برای منوی رستوران با تصاویر و فونت‌های مناسب</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">رستوران</span>
+                            <span class="tag">خلاقانه</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>بروشور محصولات</h4>
+                        <p>معرفی محصولات با طراحی تمیز و ساده که جذابیت بصری بالایی دارد</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">محصولات</span>
+                            <span class="tag">مینیمال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>بروشور آموزشی</h4>
+                        <p>طراحی مناسب برای مراکز آموزشی با رنگ‌بندی آرام و قابل خواندن</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">آموزشی</span>
+                            <span class="tag">حرفه‌ای</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>بروشور پزشکی</h4>
+                        <p>طراحی متناسب با حوزه پزشکی با رنگ‌های آرامش‌بخش و طراحی تمیز</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">پزشکی</span>
+                            <span class="tag">تمیز</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>بروشور فروشگاهی</h4>
+                        <p>طراحی جذاب برای فروشگاه‌ها با تأکید بر محصولات و تخفیف‌ها</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">فروش</span>
+                            <span class="tag">جذاب</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2>نیاز به طراحی بروشور دارید؟</h2>
+                <p>تیم ما آماده طراحی بروشور اختصاصی برای کسب‌وکار شماست</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-envelope me-2"></i>
+                    سفارش طراحی
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

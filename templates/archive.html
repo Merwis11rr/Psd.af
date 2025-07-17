@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block title %}آرشیو کارها - PSD.af{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">سابقه کاری / آرشیو</h1>
+                <p class="page-subtitle">پروژه‌های موفق قبلی ما</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="archive-stats py-4">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">پروژه تکمیل شده</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">مشتری راضی</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">سال تجربه</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">پشتیبانی</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-tabs py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-pills justify-content-center mb-4" id="portfolioTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all">همه کارها</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#brochures">بروشورها</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#business-cards">کارت‌های ویزیت</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#logos">لوگوها</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#other">سایر کارها</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="all">
+                <div class="row">
+                    <!-- Archive items will be shown here -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>طراحی بروشور شرکت نرم‌افزاری</h6>
+                                <p class="archive-category">بروشور</p>
+                                <span class="archive-year">۱۴۰۲</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>کارت ویزیت دکتر احمدی</h6>
+                                <p class="archive-category">کارت ویزیت</p>
+                                <span class="archive-year">۱۴۰۲</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>لوگوی رستوران سنتی</h6>
+                                <p class="archive-category">لوگو</p>
+                                <span class="archive-year">۱۴۰۱</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>طراحی کاتالوگ محصولات</h6>
+                                <p class="archive-category">کاتالوگ</p>
+                                <span class="archive-year">۱۴۰۱</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>بروشور کلینیک زیبایی</h6>
+                                <p class="archive-category">بروشور</p>
+                                <span class="archive-year">۱۴۰۰</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>کارت ویزیت مهندس عمران</h6>
+                                <p class="archive-category">کارت ویزیت</p>
+                                <span class="archive-year">۱۴۰۰</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>پوستر تبلیغاتی</h6>
+                                <p class="archive-category">پوستر</p>
+                                <span class="archive-year">۱۳۹۹</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="archive-item">
+                            <div class="archive-image">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="archive-info">
+                                <h6>طراحی منوی کافه</h6>
+                                <p class="archive-category">منو</p>
+                                <span class="archive-year">۱۳۹۹</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other tab contents can be added here -->
+        </div>
+    </div>
+</section>
+
+<section class="testimonials py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">نظرات مشتریان</h2>
+                <p class="section-subtitle">آنچه مشتریان ما می‌گویند</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"کیفیت کار عالی و تحویل به موقع. کارت ویزیت طراحی شده برای من بسیار حرفه‌ای و زیبا بود."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>احمد محمدی</strong>
+                        <span>مدیر شرکت</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"طراحی بروشور شرکت ما فوق‌العاده شد. تیم PSD.af واقعاً حرفه‌ای هستند."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>فاطمه احمدی</strong>
+                        <span>صاحب کسب‌وکار</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"پشتیبانی عالی و قیمت مناسب. قطعاً دوباره از خدمات آن‌ها استفاده خواهم کرد."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>علی رضایی</strong>
+                        <span>طراح گرافیک</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2>آماده برای شروع پروژه جدید؟</h2>
+                <p>بیایید با هم پروژه بعدی شما را خلق کنیم</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-envelope me-2"></i>
+                    شروع پروژه
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

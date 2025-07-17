@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PSD.af - طراحی و دانلود فایل لایه باز{% endblock %}</title>
+    
+    <!-- Persian Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="PSD.af - مرجع طراحی و دانلود فایل‌های لایه باز، بروشور، کارت ویزیت و طراحی‌های گرافیکی">
+    <meta name="keywords" content="PSD, طراحی گرافیک, بروشور, کارت ویزیت, فایل لایه باز">
+    <meta name="author" content="میرویس - PSD.af">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-layer-group me-2"></i>
+                PSD.af
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('brochures') }}">بروشور</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('business_cards') }}">کارت ویزیت</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('archive') }}">آرشیو</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">تماس با ما</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav">
+                    <a class="nav-link whatsapp-btn" href="https://wa.me/93123456789" target="_blank">
+                        <i class="fab fa-whatsapp me-1"></i>
+                        واتسپ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="container mt-5 pt-4">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>PSD.af</h5>
+                    <p>مرجع طراحی و دانلود فایل‌های لایه باز، ارائه‌دهنده خدمات طراحی حرفه‌ای</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>لینک‌های مفید</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('brochures') }}">بروشورها</a></li>
+                        <li><a href="{{ url_for('business_cards') }}">کارت‌های ویزیت</a></li>
+                        <li><a href="{{ url_for('archive') }}">آرشیو کارها</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>تماس با ما</h6>
+                    <p>
+                        <a href="https://wa.me/93123456789" class="whatsapp-link">
+                            <i class="fab fa-whatsapp me-1"></i>
+                            ارتباط در واتسپ
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; ۲۰۲۵ طراحی شده توسط میرویس ♥ PSD.af — تمام حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

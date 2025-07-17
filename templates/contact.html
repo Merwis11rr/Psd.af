@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}تماس با ما - PSD.af{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">تماس با ما</h1>
+                <p class="page-subtitle">برای ثبت سفارش یا مشاوره، با ما در ارتباط باشید</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5">
+                <div class="contact-form-wrapper">
+                    <h3 class="mb-4">فرم تماس</h3>
+                    <form method="POST" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">نام و نام خانوادگی *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">ایمیل *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">شماره تماس</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="service" class="form-label">نوع خدمت</label>
+                                <select class="form-control" id="service" name="service">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="brochure">طراحی بروشور</option>
+                                    <option value="business-card">طراحی کارت ویزیت</option>
+                                    <option value="logo">طراحی لوگو</option>
+                                    <option value="catalog">طراحی کاتالوگ</option>
+                                    <option value="other">سایر موارد</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">پیام شما *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required placeholder="لطفاً پروژه خود را به تفصیل شرح دهید..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            ارسال پیام
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h3 class="mb-4">اطلاعات تماس</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5>واتسپ</h5>
+                            <p>سریع‌ترین راه ارتباط با ما</p>
+                            <a href="https://wa.me/93123456789" class="whatsapp-link" target="_blank">
+                                <i class="fab fa-whatsapp me-1"></i>
+                                ارتباط در واتسپ
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5>ایمیل</h5>
+                            <p>info@psd.af</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5>ساعات کاری</h5>
+                            <p>شنبه تا پنج‌شنبه: ۸ صبح تا ۶ عصر<br>جمعه: ۱۰ صبح تا ۲ ظهر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5>پشتیبانی</h5>
+                            <p>پشتیبانی ۲۴ ساعته برای مشتریان ویژه</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-links mt-4">
+                    <h4>لینک‌های سریع</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('brochures') }}"><i class="fas fa-chevron-left me-2"></i>نمونه بروشورها</a></li>
+                        <li><a href="{{ url_for('business_cards') }}"><i class="fas fa-chevron-left me-2"></i>نمونه کارت‌های ویزیت</a></li>
+                        <li><a href="{{ url_for('archive') }}"><i class="fas fa-chevron-left me-2"></i>آرشیو کارها</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">سوالات متداول</h2>
+                <p class="section-subtitle">پاسخ به سوالات رایج مشتریان</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                چقدر زمان برای تحویل پروژه نیاز است؟
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                زمان تحویل بستگی به نوع و پیچیدگی پروژه دارد. معمولاً کارت ویزیت ۲-۳ روز و بروشور ۵-۷ روز کاری زمان نیاز دارد.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                آیا فایل‌های قابل ویرایش را نیز تحویل می‌دهید؟
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                بله، تمام فایل‌های منبع شامل PSD، AI و سایر فرمت‌های قابل ویرایش به همراه فایل‌های نهایی تحویل داده می‌شود.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                آیا امکان اصلاح و تغییر وجود دارد؟
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                بله، تا ۳ بار اصلاح رایگان شامل پروژه است. اصلاحات بیشتر با هزینه اضافی انجام می‌شود.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                نحوه پرداخت چگونه است؟
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                ۵۰٪ هنگام شروع پروژه و ۵۰٪ باقیمانده هنگام تحویل نهایی پرداخت می‌شود. پرداخت از طریق کارت به کارت، درگاه بانکی یا واتسپ پی امکان‌پذیر است.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

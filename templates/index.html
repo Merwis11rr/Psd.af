@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="hero-title">به PSD.af خوش آمدید</h1>
+                <p class="hero-subtitle">مرجع طراحی و دانلود فایل‌های لایه باز، بروشور، کارت ویزیت و طراحی‌های گرافیکی حرفه‌ای</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('brochures') }}" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-file-alt me-2"></i>
+                        مشاهده بروشورها
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>
+                        تماس با ما
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="services-preview py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">خدمات ما</h2>
+                <p class="section-subtitle">طراحی‌های حرفه‌ای و خلاقانه برای کسب‌وکار شما</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>بروشورها</h4>
+                    <p>نمونه‌ای از طراحی بروشور حرفه‌ای با کیفیت بالا و طراحی مدرن</p>
+                    <a href="{{ url_for('brochures') }}" class="btn btn-outline-primary">مشاهده نمونه‌ها</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4>کارت‌های ویزیت</h4>
+                    <p>کارت ویزیت شیک و مدرن برای ایجاد تأثیر ماندگار در ذهن مشتریان</p>
+                    <a href="{{ url_for('business_cards') }}" class="btn btn-outline-primary">مشاهده نمونه‌ها</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <h4>سابقه کاری / آرشیو</h4>
+                    <p>پروژه‌های موفق قبلی ما که نشان‌دهنده تجربه و خلاقیت تیم ماست</p>
+                    <a href="{{ url_for('archive') }}" class="btn btn-outline-primary">مشاهده آرشیو</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Work -->
+<section class="featured-work py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">نمونه کارهای ویژه</h2>
+                <p class="section-subtitle">آخرین طراحی‌های ما</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h5>طراحی بروشور شرکتی</h5>
+                        <p>طراحی مدرن و حرفه‌ای برای معرفی خدمات شرکت</p>
+                        <a href="{{ url_for('brochures') }}" class="btn btn-sm btn-primary">مشاهده بیشتر</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h5>کارت ویزیت مینیمال</h5>
+                        <p>طراحی ساده و شیک مناسب برای مشاغل مختلف</p>
+                        <a href="{{ url_for('business_cards') }}" class="btn btn-sm btn-primary">مشاهده بیشتر</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2>آماده شروع پروژه خود هستید؟</h2>
+                <p>برای ثبت سفارش یا مشاوره، با ما در ارتباط باشید</p>
+                <div class="cta-buttons">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        تماس با ما
+                    </a>
+                    <a href="https://wa.me/93123456789" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        ارتباط در واتسپ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
