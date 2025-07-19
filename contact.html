@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - PSD.af</title>
+    
+    <!-- Persian Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="تماس با PSD.af - سفارش طراحی گرافیک، بروشور و کارت ویزیت">
+    <meta name="keywords" content="تماس, سفارش طراحی, PSD.af, درخواست قیمت">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-layer-group me-2"></i>
+                PSD.af
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="brochures.html">بروشور</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business-cards.html">کارت ویزیت</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="archive.html">آرشیو</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">تماس با ما</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav">
+                    <a class="nav-link whatsapp-btn" href="https://wa.me/93123456789" target="_blank">
+                        <i class="fab fa-whatsapp me-1"></i>
+                        واتسپ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">تماس با ما</h1>
+            <p class="page-subtitle">آماده همکاری و ارائه بهترین خدمات طراحی به شما هستیم</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-8 mb-5">
+                    <div class="contact-form">
+                        <h3 class="mb-4">
+                            <i class="fas fa-envelope me-2"></i>
+                            فرم تماس
+                        </h3>
+                        <p class="mb-4">لطفاً فرم زیر را پر کنید تا در اسرع وقت با شما تماس بگیریم</p>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">نام و نام خانوادگی *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">ایمیل *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">شماره تماس</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="service" class="form-label">نوع خدمت مورد نظر</label>
+                                    <select class="form-select" id="service" name="service">
+                                        <option value="">انتخاب کنید</option>
+                                        <option value="brochure">طراحی بروشور</option>
+                                        <option value="business-card">طراحی کارت ویزیت</option>
+                                        <option value="logo">طراحی لوگو</option>
+                                        <option value="banner">طراحی بنر</option>
+                                        <option value="other">سایر خدمات</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">توضیحات پروژه *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" 
+                                          placeholder="لطفاً جزئیات پروژه خود را بنویسید..." required></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        موافقت با <a href="#" class="text-warning">قوانین و شرایط</a> سایت
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                ارسال پیام
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">
+                            <i class="fas fa-phone me-2"></i>
+                            اطلاعات تماس
+                        </h4>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>واتسپ</h6>
+                                <p>+93 123 456 789</p>
+                                <a href="https://wa.me/93123456789" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    پیام در واتسپ
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>تلگرام</h6>
+                                <p>@psdaf_official</p>
+                                <a href="https://t.me/psdaf_official" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    پیام در تلگرام
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>ایمیل</h6>
+                                <p>info@psd.af</p>
+                                <a href="mailto:info@psd.af" class="btn btn-sm btn-outline-primary">
+                                    ارسال ایمیل
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>اینستاگرام</h6>
+                                <p>@psd.af</p>
+                                <a href="https://instagram.com/psd.af" class="btn btn-sm btn-outline-primary" target="_blank">
+                                    دنبال کردن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Working Hours -->
+                    <div class="working-hours mt-5">
+                        <h5 class="mb-3">
+                            <i class="fas fa-clock me-2"></i>
+                            ساعات کاری
+                        </h5>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>شنبه - چهارشنبه</span>
+                                <span>9:00 - 18:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>پنج‌شنبه</span>
+                                <span>9:00 - 14:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>جمعه</span>
+                                <span>تعطیل</span>
+                            </div>
+                        </div>
+                        
+                        <div class="availability-status mt-3">
+                            <div class="status-indicator online"></div>
+                            <span>در حال حاضر آنلاین هستیم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">سوالات متداول</h2>
+                    <p class="section-subtitle">پاسخ‌های سریع به سوالات رایج شما</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    چقدر زمان برای تحویل پروژه نیاز است؟
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    زمان تحویل پروژه بستگی به نوع و پیچیدگی کار دارد. معمولاً:
+                                    <ul>
+                                        <li>کارت ویزیت: 2-3 روز کاری</li>
+                                        <li>بروشور ساده: 3-5 روز کاری</li>
+                                        <li>طراحی لوگو: 5-7 روز کاری</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    آیا فایل‌های لایه باز PSD ارائه می‌دهید؟
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    بله، تمامی پروژه‌ها با فایل‌های لایه باز PSD قابل ویرایش تحویل داده می‌شوند. همچنین فرمت‌های آماده چاپ نیز ارائه می‌گردد.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    نحوه پرداخت چگونه است؟
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    پرداخت در دو مرحله انجام می‌شود:
+                                    <ul>
+                                        <li>50% هنگام شروع پروژه</li>
+                                        <li>50% باقیمانده پس از تحویل نهایی</li>
+                                    </ul>
+                                    روش‌های پرداخت: کارت به کارت، درگاه بانکی
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    آیا ویرایش رایگان ارائه می‌دهید؟
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    بله، تا 3 مرحله ویرایش رایگان برای هر پروژه ارائه می‌دهیم. ویرایش‌های بیشتر با تعرفه جداگانه محاسبه می‌شود.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-4">پروژه خود را همین حالا شروع کنید</h2>
+                    <p class="section-subtitle mb-4">با ما تماس بگیرید تا بهترین طراحی را برای کسب‌وکار شما آماده کنیم</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/93123456789" class="btn btn-primary btn-lg me-3" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            تماس فوری واتسپ
+                        </a>
+                        <a href="mailto:info@psd.af" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-envelope me-2"></i>
+                            ارسال ایمیل
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">PSD.af</h5>
+                    <p class="footer-text">مرجع طراحی و دانلود فایل‌های لایه باز، بروشور، کارت ویزیت و طراحی‌های گرافیکی حرفه‌ای</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/93123456789" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="footer-title">خدمات</h6>
+                    <ul class="footer-links">
+                        <li><a href="brochures.html">بروشور</a></li>
+                        <li><a href="business-cards.html">کارت ویزیت</a></li>
+                        <li><a href="archive.html">آرشیو</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">ارتباط با ما</h6>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope me-2"></i>info@psd.af</li>
+                        <li><i class="fab fa-whatsapp me-2"></i>+93 123 456 789</li>
+                        <li><i class="fab fa-telegram me-2"></i>@psdaf_official</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">خبرنامه</h6>
+                    <p class="footer-text">از آخرین طراحی‌ها و نمونه کارهای ما باخبر شوید</p>
+                    <div class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="ایمیل شما">
+                            <button class="btn btn-primary" type="button">عضویت</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">© 2025 PSD.af - تمامی حقوق محفوظ است | طراحی شده با ❤️ توسط میرویس</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Additional CSS for Contact Page -->
+    <style>
+        .contact-info {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            height: fit-content;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, gold, orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-icon i {
+            font-size: 1.2rem;
+            color: black;
+        }
+        
+        .contact-details h6 {
+            color: gold;
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        
+        .working-hours {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .working-hours h5 {
+            color: gold;
+        }
+        
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            color: #ccc;
+        }
+        
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+        
+        .availability-status {
+            display: flex;
+            align-items: center;
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        
+        .status-indicator.online {
+            background: #28a745;
+            box-shadow: 0 0 10px #28a745;
+        }
+        
+        .accordion-item {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .accordion-button {
+            background: transparent;
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: rgba(255, 215, 0, 0.1);
+            color: gold;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+        }
+        
+        .accordion-body {
+            color: #ccc;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .accordion-body ul {
+            margin-bottom: 0;
+        }
+        
+        .accordion-body li {
+            margin-bottom: 5px;
+        }
+    </style>
+</body>
+</html>
