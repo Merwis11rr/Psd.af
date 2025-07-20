@@ -1,0 +1,535 @@
+/* Persian Design Portfolio CSS */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at center, #111, #000);
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, gold, orange, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin: 0 10px;
+    padding: 8px 16px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: gold;
+    color: black !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    border-color: gold;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    border-radius: 25px;
+    color: white !important;
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(45deg, #128C7E, #25D366);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle at center, #111, #000);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffcc00' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    opacity: 0.3;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, gold, orange, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero-buttons {
+    text-align: center;
+}
+
+/* Page Headers */
+.page-header {
+    padding: 120px 0 60px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, gold, orange, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Section Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, gold, orange, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Service Cards */
+.service-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: gold;
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.service-card h4 {
+    color: gold;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 300px;
+}
+
+.portfolio-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.placeholder-image {
+    text-align: center;
+    color: #ccc;
+}
+
+.placeholder-image i {
+    font-size: 3rem;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 215, 0, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-info {
+    text-align: center;
+    color: white;
+}
+
+.portfolio-info h5 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* Company Stats */
+.company-stats {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.05));
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(0, 0, 0, 0.9));
+    border-top: 1px solid #333;
+}
+
+.footer-title {
+    color: gold;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-text {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: gold;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    color: #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    color: gold;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.newsletter-form .input-group {
+    margin-top: 15px;
+}
+
+.newsletter-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: white;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #ccc;
+}
+
+.newsletter-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: gold;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+    color: white;
+}
+
+.footer-divider {
+    border-color: #333;
+    margin: 30px 0 20px;
+}
+
+.copyright {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(45deg, gold, orange);
+    border: none;
+    color: black;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, orange, gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    color: black;
+}
+
+.btn-outline-primary {
+    border: 2px solid gold;
+    color: gold;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: gold;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons .btn {
+        margin: 5px;
+        display: block;
+        width: 100%;
+    }
+    
+    .hero-buttons .me-3 {
+        margin-left: 0 !important;
+    }
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    padding: 60px 0;
+}
+
+.portfolio-filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    color: #ccc;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: gold;
+    color: black;
+    border-color: gold;
+}
+
+/* Contact Form */
+.contact-form {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: gold;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+    color: white;
+}
+
+.form-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: white;
+}
+
+.form-select:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: gold;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+    color: white;
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(40, 167, 69, 0.1));
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #d4edda;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.2), rgba(220, 53, 69, 0.1));
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #f8d7da;
+}

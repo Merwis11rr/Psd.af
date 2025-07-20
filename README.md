@@ -11,16 +11,12 @@ A professional Persian (Farsi) graphic design portfolio website built with Flask
 - **Contact System**: Contact form with database storage and admin interface
 - **Database Integration**: PostgreSQL with SQLAlchemy ORM
 - **Admin Panel**: Backend management for contacts and content
+- **Interactive Elements**: Smooth animations and hover effects
+- **SEO Optimized**: Proper meta tags and structured markup
 
 ## 🚀 Live Demo
 
 Visit the live website: [Your Domain Here]
-
-## 📸 Screenshots
-
-![Homepage](screenshots/homepage.png)
-![Portfolio](screenshots/portfolio.png)
-![Contact Form](screenshots/contact.png)
 
 ## 🛠️ Tech Stack
 
@@ -112,15 +108,22 @@ python main.py
 
 Visit `http://localhost:5000` to see the website.
 
-### Docker Setup (Optional)
+## 🚀 GitHub Pages Deployment
 
-```bash
-# Build Docker image
-docker build -t psd-af-portfolio .
+### Quick Setup
 
-# Run with Docker Compose
-docker-compose up -d
-```
+1. **Fork this repository** or **create a new repository**
+2. **Upload all files** to your repository
+3. **Enable GitHub Pages**:
+   - Go to repository **Settings**
+   - Scroll to **Pages** section
+   - Select **Deploy from a branch**
+   - Choose **main** branch and **/ (root)** folder
+   - Click **Save**
+
+4. **Access Your Site**:
+   - Your site will be available at: `https://yourusername.github.io/repository-name`
+   - It may take a few minutes to deploy
 
 ## 🎨 Database Schema
 
@@ -133,95 +136,31 @@ docker-compose up -d
 - **Service**: Available design services and pricing
 - **Newsletter**: Email subscription management
 
-### Sample Data
+## 📞 Contact Information
 
-To populate the database with sample data:
-```bash
-# Visit /admin/sample-data in your browser
-# Or run programmatically:
-python -c "from routes import create_sample_data; create_sample_data()"
-```
+- **WhatsApp**: +93 123 456 789
+- **Telegram**: @psdaf_official
+- **Email**: info@psd.af
+- **Instagram**: @psd.af
 
-## 🚀 Deployment
+## 🔧 Customization
 
-### Heroku Deployment
+### Contact Information
+Update contact details in all HTML files:
+- WhatsApp number: Search for `93123456789` and replace
+- Email: Search for `info@psd.af` and replace
+- Social media links: Update href attributes
 
-1. **Create Heroku app:**
-```bash
-heroku create your-app-name
-heroku addons:create heroku-postgresql:mini
-```
+### Colors & Styling
+Modify `css/style.css`:
+- Primary colors: Search for `gold` and `orange`
+- Background gradients: Look for `linear-gradient` and `radial-gradient`
+- Typography: Modify font-family properties
 
-2. **Set environment variables:**
-```bash
-heroku config:set SESSION_SECRET=your-secret-key
-```
-
-3. **Deploy:**
-```bash
-git push heroku main
-```
-
-### VPS Deployment
-
-1. **Set up server with Nginx and Gunicorn**
-2. **Configure SSL with Let's Encrypt**
-3. **Set up process manager (systemd/supervisor)**
-
-## 📝 Usage
-
-### Admin Functions
-
-- **View Contacts**: `/admin/contacts` - Manage customer inquiries
-- **Sample Data**: `/admin/sample-data` - Populate database with demo content
-
-### API Endpoints
-
-- `GET /` - Homepage with featured portfolio
-- `GET /brochures` - Brochures portfolio page
-- `GET /business-cards` - Business cards portfolio
-- `GET /archive` - Complete portfolio archive
-- `GET /contact` - Contact form
-- `POST /contact` - Submit contact form
-
-## 🎯 Features to Implement
-
-### High Priority
-- [ ] User authentication and admin dashboard
-- [ ] Image upload and gallery management
-- [ ] Blog system for design insights
-- [ ] Newsletter subscription system
-- [ ] Multi-language support (Persian/English)
-
-### Medium Priority
-- [ ] Online payment integration
-- [ ] Project management system
-- [ ] Client portal for project tracking
-- [ ] SEO optimization
-- [ ] Analytics integration
-
-### Low Priority
-- [ ] Social media integration
-- [ ] Live chat support
-- [ ] Email marketing integration
-- [ ] Mobile app
-- [ ] API for third-party integrations
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Follow PEP 8 for Python code style
-- Use meaningful commit messages
-- Add comments for complex logic
-- Update documentation for new features
-- Test thoroughly before submitting PR
+### Content
+- Replace placeholder text with your actual content
+- Add real portfolio images
+- Update company information and statistics
 
 ## 📄 License
 
@@ -234,20 +173,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Email: info@psd.af
 - WhatsApp: [Contact Us](https://wa.me/93123456789)
 
-## 🙏 Acknowledgments
-
-- Bootstrap team for RTL support
-- Google Fonts for Vazirmatn typeface
-- Font Awesome for beautiful icons
-- Flask community for excellent documentation
-
-## 📞 Support
-
-For support, email info@psd.af or join our WhatsApp group.
-
 ## 🔄 Changelog
 
-### v1.1.0 (July 17, 2025)
+### v1.1.0 (July 20, 2025)
 - ✅ Added PostgreSQL database integration
 - ✅ Created comprehensive data models
 - ✅ Implemented contact form database storage
@@ -266,4 +194,4 @@ For support, email info@psd.af or join our WhatsApp group.
 
 ---
 
-Made with ❤️ for the Persian design community
+**Built with ❤️ for the Persian design community**
