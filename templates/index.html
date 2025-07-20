@@ -6,9 +6,9 @@
     <div class="container">
         <div class="row align-items-center min-vh-100">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="hero-title">به PSD.af خوش آمدید</h1>
-                <p class="hero-subtitle">مرجع طراحی و دانلود فایل‌های لایه باز، بروشور، کارت ویزیت و طراحی‌های گرافیکی حرفه‌ای</p>
-                <div class="hero-buttons">
+                <h1 class="hero-title fade-in">به PSD.af خوش آمدید</h1>
+                <p class="hero-subtitle slide-up" style="animation-delay: 0.3s;">مرجع طراحی و دانلود فایل‌های لایه باز، بروشور، کارت ویزیت و طراحی‌های گرافیکی حرفه‌ای</p>
+                <div class="hero-buttons slide-up" style="animation-delay: 0.6s;">
                     <a href="{{ url_for('brochures') }}" class="btn btn-primary btn-lg me-3">
                         <i class="fas fa-file-alt me-2"></i>
                         مشاهده بروشورها
@@ -28,14 +28,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h2 class="section-title">خدمات ما</h2>
-                <p class="section-subtitle">طراحی‌های حرفه‌ای و خلاقانه برای کسب‌وکار شما</p>
+                <h2 class="section-title fade-in">خدمات ما</h2>
+                <p class="section-subtitle fade-in" style="animation-delay: 0.2s;">طراحی‌های حرفه‌ای و خلاقانه برای کسب‌وکار شما</p>
             </div>
         </div>
         
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="service-card">
+                <div class="service-card fade-in" style="animation-delay: 0.1s;">
                     <div class="service-icon">
                         <i class="fas fa-file-alt"></i>
                     </div>
@@ -46,7 +46,7 @@
             </div>
             
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="service-card">
+                <div class="service-card fade-in" style="animation-delay: 0.3s;">
                     <div class="service-icon">
                         <i class="fas fa-id-card"></i>
                     </div>
@@ -57,7 +57,7 @@
             </div>
             
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="service-card">
+                <div class="service-card fade-in" style="animation-delay: 0.5s;">
                     <div class="service-icon">
                         <i class="fas fa-archive"></i>
                     </div>
@@ -70,19 +70,51 @@
     </div>
 </section>
 
+<!-- Stats Section -->
+<section class="archive-stats py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item fade-in" style="animation-delay: 0.1s;">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">پروژه موفق</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item fade-in" style="animation-delay: 0.3s;">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">رضایت مشتریان</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item fade-in" style="animation-delay: 0.5s;">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">پشتیبانی رایگان</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item fade-in" style="animation-delay: 0.7s;">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">سال تجربه</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Featured Work -->
 <section class="featured-work py-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h2 class="section-title">نمونه کارهای ویژه</h2>
-                <p class="section-subtitle">آخرین طراحی‌های ما</p>
+                <h2 class="section-title fade-in">نمونه کارهای ویژه</h2>
+                <p class="section-subtitle fade-in" style="animation-delay: 0.2s;">آخرین طراحی‌های ما</p>
             </div>
         </div>
         
         <div class="row">
             <div class="col-lg-6 mb-4">
-                <div class="portfolio-item">
+                <div class="portfolio-item slide-up" style="animation-delay: 0.1s;">
                     <div class="portfolio-content">
                         <h5>طراحی بروشور شرکتی</h5>
                         <p>طراحی مدرن و حرفه‌ای برای معرفی خدمات شرکت</p>
@@ -92,7 +124,7 @@
             </div>
             
             <div class="col-lg-6 mb-4">
-                <div class="portfolio-item">
+                <div class="portfolio-item slide-up" style="animation-delay: 0.3s;">
                     <div class="portfolio-content">
                         <h5>کارت ویزیت مینیمال</h5>
                         <p>طراحی ساده و شیک مناسب برای مشاغل مختلف</p>
@@ -100,6 +132,71 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title fade-in">نظرات مشتریان</h2>
+                <p class="section-subtitle fade-in" style="animation-delay: 0.2s;">تجربه مشتریان ما از خدمات مان</p>
+            </div>
+        </div>
+        <div class="row">
+            {% if testimonials %}
+                {% for testimonial in testimonials[:3] %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card fade-in" style="animation-delay: {{ loop.index * 0.2 }}s;">
+                        <div class="testimonial-content">
+                            <p>"{{ testimonial.content }}"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>{{ testimonial.client_name }}</strong>
+                            {% if testimonial.client_title %}
+                            <span>{{ testimonial.client_title }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card fade-in" style="animation-delay: 0.1s;">
+                        <div class="testimonial-content">
+                            <p>"کیفیت کار عالی و تحویل به موقع. کارت ویزیت طراحی شده برای من بسیار حرفه‌ای و زیبا بود."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>احمد محمدی</strong>
+                            <span>مدیر شرکت</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card fade-in" style="animation-delay: 0.3s;">
+                        <div class="testimonial-content">
+                            <p>"طراحی بروشور شرکت ما فوق‌العاده شد. تیم PSD.af واقعاً حرفه‌ای هستند."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>فاطمه احمدی</strong>
+                            <span>صاحب کسب‌وکار</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card fade-in" style="animation-delay: 0.5s;">
+                        <div class="testimonial-content">
+                            <p>"پشتیبانی عالی و قیمت مناسب. قطعاً دوباره از خدمات آن‌ها استفاده خواهم کرد."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>علی رضایی</strong>
+                            <span>طراح گرافیک</span>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>
